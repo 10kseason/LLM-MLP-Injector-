@@ -1,6 +1,27 @@
 # UZR-Garage: Universal Zero-shot Reasoner (PoC)
 
 
+
+## What is this repo?
+
+**LLM-MLP-Injector** is a small PoC in the UZR line of experiments.
+
+The idea is:
+
+- Treat a 7B LLM as a **Teacher**.
+- Harvest its **“attention habits”** (entropy / locality over layers & heads).
+- Train a lightweight **MLP Controller** that predicts those patterns.
+- At runtime, **inject** the controller’s output into a tiny **0.5B Student** via monkey-patching.
+- Add a **gating MLP** that decides *when* to inject strongly vs back off, based on the Teacher’s confidence and the Student’s state.
+
+It’s not a polished library – it’s a research playground to see:
+> “How far can a small model go if we literally pour a bigger model’s attention habits into it?”
+
+
+
+
+
+
 ## 이 저장소는 뭐 하는 곳인가요?
 
 **LLM-MLP-Injector**는 UZR 계열 실험 중 하나인 작은 PoC입니다.
@@ -142,5 +163,6 @@ uzr_garage/
     ├── checkpoints/          # 학습된 모델 저장소
     └── data/                 # 데이터셋 저장소
 ```
+
 
 
