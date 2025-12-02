@@ -15,8 +15,8 @@
 ### 2. 환경 설정
 ```bash
 # 저장소 클론
-git clone https://github.com/your-username/uzr-garage.git
-cd uzr-garage
+git clone https://github.com/10kseason/LLM-MLP-Injector-.git
+cd LLM-MLP-Injector-
 
 # 가상환경 생성 (선택 사항)
 python -m venv .venv
@@ -122,3 +122,4 @@ uzr_garage/
     ├── checkpoints/          # 학습된 모델 저장소
     └── data/                 # 데이터셋 저장소
 ```
+
